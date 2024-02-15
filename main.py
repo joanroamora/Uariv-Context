@@ -22,4 +22,4 @@ def main(pregunta):
 
 
 if __name__ == "__main__":
-    main()
+    main("¿Que es la operacion orion?")
