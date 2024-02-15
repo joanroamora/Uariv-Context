@@ -4,3 +4,6 @@ langchain
 sentence-transformers 
 faiss-cpu 
 openai
+cohere 
+tiktoken 
+python-dotenv
