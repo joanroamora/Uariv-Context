@@ -2,7 +2,7 @@
 from modules import docLoader, txt_final, textSplitterConfig, embeddingSetup, vectorStoreCreation, openAIConfig
 def main(pregunta):
     pages = docLoader("./pdfs")
-    print (pages)
+    #print (pages)
     texto_final = txt_final(pages)
     texts = textSplitterConfig ( 750 , 75, texto_final)
     
