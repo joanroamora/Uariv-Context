@@ -13,10 +13,9 @@ from langchain_community.vectorstores import FAISS
 #from langchain_community.chat_models import ChatOpenAI
 from langchain_openai import ChatOpenAI
 
-
-
-
 load_dotenv()
+
+
 #DOCUMENT LOADER
 
 def docLoader(directorio_pdf ):
@@ -50,12 +49,12 @@ def txt_final (documentsDocumentLoader):
     #variable vacia para el output
     texto_final = ""
 
-    for indice, Document in enumerate(pages):
+    for indice, Document in enumerate(documentsDocumentLoader):
         # Se agrega el page_content de cada documento al final de la variable texto_final
         texto_final += Document.page_content
 
         # Si no es el último documento, se agrega un salto de página
-        if indice < len(pages) - 1:
+        if indice < len(documentsDocumentLoader) - 1:
             texto_final += "\n\n"
 
     #   Se imprime el contenido final de la variable texto_final
