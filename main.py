@@ -19,6 +19,21 @@ def main(pregunta):
     respuesta = chain.run(input_documents=docs, question=pregunta)
     print(f"Respuesta ChatGPT: {respuesta}")
 
+    while True:
+        # Solicita al usuario una nueva pregunta
+        pregunta = input("Ingrese una nueva pregunta o escriba 'salir' para terminar: ")
+
+        # Verifica si el usuario desea salir
+        if pregunta.lower() == 'salir':
+            print("Finalizando ejecución.")
+            break  # Sale del bucle para terminar la ejecución
+
+        # Busqueda de párrafos similares
+        docs = knowledge_base.similarity_search(pregunta, 3)
+        # Utilizar los parrafos similares para darle contexto a ChatGPT
+        respuesta = chain.run(input_documents=docs, question=pregunta)
+        print(f"Respuesta ChatGPT: {respuesta}")
 
 
-main("¿Que es la operacion orion?")
+
+main("¿cuales han sido las principales violaciones a derechos humanos ocurridas en colombia?")
