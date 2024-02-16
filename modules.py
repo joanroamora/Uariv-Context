@@ -1,4 +1,4 @@
-from langchain_openai import ChatOpenAI,OpenAIEmbedding
+from langchain_openai import ChatOpenAI
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import CharacterTextSplitter
