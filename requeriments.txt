@@ -7,3 +7,4 @@ openai
 cohere 
 tiktoken 
 python-dotenv
+langchain_openai
